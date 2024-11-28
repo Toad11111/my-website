@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Player Stats</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const table = document.querySelector('table');
+            const headers = table.querySelectorAll('th');
+            const rows = Array.from(table.querySelectorAll('tbody tr'));
+
+            headers.forEach((header, index) => {
+                header.addEventListener('click', () => {
+                    const sortedRows = rows.sort((a, b) => {
+                        const aText = a.children[index].textContent.trim();
+                        const bText = b.children[index].textContent.trim();
+
+                        if (!isNaN(aText) && !isNaN(bText)) {
+                            return parseFloat(bText) - parseFloat(aText);
+                        }
+
+                        return aText.localeCompare(bText);
+                    });
+
+                    table.querySelector('tbody').append(...sortedRows);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>Sieurs Stats 2024-2025 </h1>
+</header>
+
+<main>
+    <h2>Player Overview</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Total Goals</th>
+                <th>Total Assists</th>
+                <th>Total Points</th>
+                <th>Game Log</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Desjardins</td>
+                <td>10</td>
+                <td>6</td>
+                <td>16</td>
+                <td><a href="desjardins.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Guenette</td>
+                <td>7</td>
+                <td>8</td>
+                <td>15</td>
+                <td><a href="guenette.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Paquin-Brien</td>
+                <td>2</td>
+                <td>12</td>
+                <td>14</td>
+                <td><a href="paquin-brien.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Pelletier</td>
+                <td>7</td>
+                <td>6</td>
+                <td>13</td>
+                <td><a href="pelletier.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Ouellette</td>
+                <td>6</td>
+                <td>7</td>
+                <td>13</td>
+                <td><a href="ouellette.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Millette</td>
+                <td>7</td>
+                <td>5</td>
+                <td>12</td>
+                <td><a href="millette.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Sinopoli</td>
+                <td>1</td>
+                <td>11</td>
+                <td>12</td>
+                <td><a href="sinopoli.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Sagesse</td>
+                <td>3</td>
+                <td>8</td>
+                <td>11</td>
+                <td><a href="sagesse.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Simard</td>
+                <td>6</td>
+                <td>3</td>
+                <td>9</td>
+                <td><a href="simard.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>A.Poitras</td>
+                <td>1</td>
+                <td>7</td>
+                <td>8</td>
+                <td><a href="apoitras.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Demers</td>
+                <td>2</td>
+                <td>4</td>
+                <td>6</td>
+                <td><a href="demers.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Jacques</td>
+                <td>0</td>
+                <td>4</td>
+                <td>4</td>
+                <td><a href="jacques.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>M.Poitras</td>
+                <td>2</td>
+                <td>2</td>
+                <td>4</td>
+                <td><a href="mpoitras.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Corriveau</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><a href="corriveau.html">View Game Log</a></td>
+            </tr>
+            <tr>
+                <td>Plante</td>
+                <td>0</td>
+                <td>1</td>
+                <td>1</td>
+                <td><a href="plante.html">View Game Log</a></td>
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+<footer>
+    <p>&copy; 2024 Hockey Stats. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
