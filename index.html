@@ -59,6 +59,46 @@
             bottom: 0;
             width: 100%;
         }
+
+        .next-up {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #ffffff; /* White background */
+            border: 3px solid #007bff; /* Blue border */
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for a pop-out effect */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .next-up-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #007bff; /* Blue text color */
+            margin-bottom: 10px;
+        }
+
+        .next-up-logos {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .team-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .vs {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333; /* Neutral color for "vs" */
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -90,6 +130,16 @@
 <header>
     <h1>Sieurs Stats 2024-2025 </h1>
 </header>
+
+<!-- "NEXT UP" Section -->
+<div class="next-up">
+    <span class="next-up-title">NEXT UP:</span>
+    <div class="next-up-logos">
+        <img src="terrebonne.png" alt="Terrebonne" class="team-logo">
+        <span class="vs">vs</span>
+        <img src="patriotessteustache.png" alt="Patriotes St-Eustache" class="team-logo">
+    </div>
+</div>
 
 <main>
     <h2>Player Overview</h2>
