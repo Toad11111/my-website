@@ -85,13 +85,27 @@
         .next-up-logos {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 20px;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .team-logo {
             width: 50px;
             height: 50px;
             object-fit: contain;
+        }
+
+        .team-record {
+            font-size: 14px;
+            font-weight: bold;
+            color: #007bff; /* Blue text color for the record */
+            margin-top: 5px;
         }
 
         .vs {
@@ -135,9 +149,15 @@
 <div class="next-up">
     <span class="next-up-title">NEXT UP:</span>
     <div class="next-up-logos">
-        <img src="terrebonne.png" alt="Terrebonne" class="team-logo">
+        <div class="team">
+            <img src="terrebonne.png" alt="Terrebonne" class="team-logo">
+            <span class="team-record">9-2-1</span>
+        </div>
         <span class="vs">vs</span>
-        <img src="patriotessteustache.png" alt="Patriotes St-Eustache" class="team-logo">
+        <div class="team">
+            <img src="patriotessteustache.png" alt="Patriotes St-Eustache" class="team-logo">
+            <span class="team-record">1-10-1</span>
+        </div>
     </div>
 </div>
 
